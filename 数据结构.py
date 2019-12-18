@@ -24,3 +24,7 @@ list2 = [x*2 for x in vec if x > 3]
 print(list)
 print(list1)
 print(list2)
+
+# del语句
+# 可以使用del语句删除一个列表中的切片或者删除整个列表
+# 也可以删除实体变量
