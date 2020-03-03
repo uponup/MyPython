@@ -1,7 +1,6 @@
 import tkinter
 import tkinter.messagebox
 
-
 def main():
     flag = True
 

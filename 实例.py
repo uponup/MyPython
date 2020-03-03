@@ -7,7 +7,6 @@ def fibonacci(n):
         counter += 1
 
     return arr
-    
 
 def main():
     print(fibonacci(10))

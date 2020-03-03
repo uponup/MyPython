@@ -10,7 +10,7 @@ print(random.randrange(6))
 
 
 # 访问互联网
-
+import urllib
 
 # 时间和日期
 from datetime import date

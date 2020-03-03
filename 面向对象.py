@@ -98,6 +98,13 @@ class Animal(object):
         return self._age
 
     @property
+    def address(self):
+        return self._address
+    @address.setter
+    def address(self, address):
+        self._address = address
+
+    @property
     def name(self):
         return self._name
 
