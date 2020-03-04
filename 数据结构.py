@@ -21,7 +21,7 @@ vec = [1, 2, 3, 4, 5, 6]
 list = [x for x in vec]
 list1 = [x for x in vec if x > 3]
 list2 = [x*2 for x in vec if x > 3]
-print(list)
+print(len(list))
 print(list1)
 print(list2)
 
