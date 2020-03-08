@@ -50,6 +50,5 @@ def main_2():
 
     print('总共耗费了%.2f秒' % (end - start))
 
-if __name__ == '__main__':
-    main_2()
-
+# if __name__ == '__main__':
+#     main_2()

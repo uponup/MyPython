@@ -30,7 +30,8 @@ def save_book_list(item):
         f.write(json.dumps(item, ensure_ascii=False) + '\n')
         f.close
 
-
 if __name__ == "__main__":
     for i in range(1, 26):
         main(i)
+
+
