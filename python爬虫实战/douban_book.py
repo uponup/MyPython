@@ -23,24 +23,22 @@ def request_url(url):
 def response_parse(html):
     pattern = re.compile(r'<li>.*?<img.*?src="(.*?)".*?<a href="(.*?)".*?<span class="title">(.*?)</span>.*?<p class="">(.*?)<br>(.*?)</p>.*?v:average">(.*?)</span>.*?</div>.*?<span class="inq">(.*?)</span>.*?</li>', re.S)
     items = re.findall(pattern, html)
-    print(items)
     return items
 
 def save_csv(items):
     with open('./python爬虫实战/douban_movie.csv', 'a') as csv_file:
-        filed_name = ['封皮', '详情', '电影名', '导演主演', '类型', '评分', '一句话评价']
+        filed_name = ['序号', '书籍封面', '书名', '推荐', '出版时间', '出版社', '五星评价人数', '现价', '原价', '折扣']
         writer = csv.DictWriter(csv_file, filed_name)
         writer.writeheader()
         for item in items:
-            row = {"封皮": item[0], "详情": item[1], "电影名": item[2], "导演主演": item[3], "类型": item[4], "评分": item[5], "一句话评价": item[6]}
+            row = {"序号": item[0], "书籍封面": item[1], "书名": item[2], "推荐": item[3], "出版时间": item[4], "出版社": item[5], "五星评价人数": item[6], "现价": item[7], "原价": item[8], "折扣":item[9]}
             writer.writerow(row)
         csv_file.close()
 
 
 if __name__ == "__main__":
     items = []
-    for i in range(0, 10):
-        print("正在爬取第" + str(i) + "页")
+    for i in range(0, 25):
         items.extend(spider(i))
-    
+        
     save_csv(items)
